@@ -1,15 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Sensor Monitor</title>
     <script src="/static/script.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: #4a90e2;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        button:hover {
+            background: #357ab8;
+        }
+
+        h2 {
+            margin-top: 40px;
+            color: #34495e;
+        }
+
+        #output {
+            width: 80%;
+            max-width: 700px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #dce1e7;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-size: 15px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    <h1>Sensor Data</h1>
+
+    <h1>Sensor Data Monitor</h1>
 
     <button onclick="sendTest()">Send Test JSON</button>
 
     <h2>Results:</h2>
-    <pre id="output"></pre>
+    <pre id="output">Waiting for data...</pre>
+
 </body>
 </html>
